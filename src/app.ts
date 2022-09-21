@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import prodRoute from './routes/productRoute';
+import userRoute from './routes/userRoute';
 
 const app = express();
 
@@ -11,5 +12,6 @@ app.get('/', (req: Request, res: Response) => (
 ));
 
 app.use('/products', prodRoute);
+app.use('/users', userRoute);
 
 export default app;
